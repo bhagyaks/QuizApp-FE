@@ -1,0 +1,10 @@
+<!-- Loading State -->
+@if (currentQuiz$ | async; as quiz) {
+  <div>
+    <!-- Quiz Header -->
+    <mat-card class="quiz-header">
+      <mat-card-title>{{ quiz.title }}</mat-card-title>
+      <mat-card-subtitle>{{ quiz.category }}</mat-card-subtitle>
+    </mat-card>
+  </div>
+}

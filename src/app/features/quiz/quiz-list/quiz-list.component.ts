@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { combineLatest, Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
-import { selectError, selectIsLoading, selectQuizData } from '../store/quiz.reducer';
+import { selectError, selectIsLoading, selectQuizData } from '../store/quiz.selectors';
 import { QuizStateInterface } from '../../../core/types/quizState.interface';
 import { CommonModule } from '@angular/common';
 import { SpinnerComponent } from '../../../shared/components/spinner/spinner.component';
 import { QuizCardComponent } from '../../../shared/components/quiz-card/quiz-card.component';
 import { quizActions } from '../store/quiz.actions';
+import { QuizInterface } from '../../../core/types/quiz.interface';
 
 @Component({
   selector: 'quiz-list',
@@ -15,8 +16,12 @@ import { quizActions } from '../store/quiz.actions';
   imports: [CommonModule, SpinnerComponent, QuizCardComponent],
 })
 export class QuizListComponent {
-  quiz$: Observable<QuizStateInterface>;
-  constructor(private store: Store) {
+  quiz$: Observable<{
+    isLoading: boolean;
+    error: string | null;
+    data: QuizInterface[] | null;
+  }>;
+  constructor(private store: Store<{ quiz: QuizStateInterface }>) {
     this.quiz$ = combineLatest({
       isLoading: this.store.select(selectIsLoading),
       error: this.store.select(selectError),

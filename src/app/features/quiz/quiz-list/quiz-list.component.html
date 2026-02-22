@@ -3,10 +3,9 @@
     <h1>Knowledge Intelligence Platform</h1>
     <p>Structured assessments designed for measurable growth</p>
   </section>
-
   @if (quiz$ | async; as quiz) {
     <ng-container>
-      @if (quiz.isLoading) {
+      @if (quiz.isLoading || !quiz.data?.length) {
         <spinner />
       }
       @if (quiz.error) {

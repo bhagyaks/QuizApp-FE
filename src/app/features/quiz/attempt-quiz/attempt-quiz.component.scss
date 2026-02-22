@@ -1,0 +1,36 @@
+.quiz-header {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.question-card {
+  margin-bottom: 1rem;
+}
+
+.question-text {
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.answers {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.answer-btn {
+  justify-content: flex-start;
+}
+
+.result-card {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+}

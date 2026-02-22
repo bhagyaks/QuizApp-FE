@@ -5,7 +5,7 @@ import { MaterialModule } from '../../material.module';
   selector: 'spinner',
   template: `
     <div class="spinner-wrapper">
-      <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+      <mat-progress-spinner mode="indeterminate" diameter="50"> </mat-progress-spinner>
     </div>
   `,
   styles: [
