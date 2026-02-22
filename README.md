@@ -72,4 +72,8 @@ Designed to reflect real-world scalable frontend architecture, not tutorial-leve
 
   - Protected routes
 
+<img width="1697" height="901" alt="image" src="https://github.com/user-attachments/assets/5edfbf92-b288-4500-a682-7ba404685428" />
+
+<img width="1579" height="913" alt="image" src="https://github.com/user-attachments/assets/bffa8e03-b1c3-4519-a1b5-17a17651bfba" />
+
 
