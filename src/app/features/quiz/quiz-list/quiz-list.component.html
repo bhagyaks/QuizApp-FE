@@ -1,21 +1,22 @@
-<div class="fintech-wrapper">
+<div class="wrapper">
   <section class="hero">
     <h1>Knowledge Intelligence Platform</h1>
     <p>Structured assessments designed for measurable growth</p>
   </section>
   @if (quiz$ | async; as quiz) {
-    <ng-container>
-      @if (quiz.isLoading || !quiz.data?.length) {
-        <spinner />
+    @if (quiz.isLoading) {
+      <spinner />
+    }
+    @if (!quiz.isLoading && !quiz.data?.length) {
+      <div class="no-data">No quizzes available.</div>
+    }
+    @if (quiz.error) {
+      <div class="error">Something went wrong. Please try again.</div>
+    }
+    <div class="grid">
+      @for (data of quiz.data; track data._id) {
+        <quiz-card [quiz]="data"></quiz-card>
       }
-      @if (quiz.error) {
-        <div class="error">Something went wrong. Please try again.</div>
-      }
-      <div class="grid">
-        @for (data of quiz.data; track data) {
-          <quiz-card [quiz]="data"></quiz-card>
-        }
-      </div>
-    </ng-container>
+    </div>
   }
 </div>

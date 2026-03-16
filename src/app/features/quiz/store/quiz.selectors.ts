@@ -15,4 +15,14 @@ export const selectSelectedAnswers = createSelector(
   selectQuizFeature,
   (state) => state.selectedAnswers,
 );
+export const selectQuizVM = createSelector(
+  selectIsLoading,
+  selectError,
+  selectQuizData,
+  (isLoading, error, data) => ({
+    isLoading,
+    error,
+    data,
+  }),
+);
 export const selectScore = createSelector(selectQuizFeature, (state) => state.score);

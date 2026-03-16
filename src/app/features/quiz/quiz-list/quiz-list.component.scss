@@ -1,4 +1,4 @@
-.fintech-wrapper {
+.wrapper {
   min-height: 100vh;
   padding: 5rem 2rem;
   background: radial-gradient(circle at top left, #0f172a, #020617);
@@ -19,6 +19,7 @@
   p {
     font-size: 1.1rem;
     color: #94a3b8;
+    padding-top: 0.8rem;
   }
 }
 
@@ -35,4 +36,61 @@
   color: #d32f2f;
   font-weight: 500;
   margin-top: 2rem;
+}
+
+/* ---------- TABLET ---------- */
+
+@media (max-width: 1024px) {
+  .wrapper {
+    padding: 4rem 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .grid {
+    gap: 2rem;
+  }
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 3rem 1rem;
+  }
+
+  .hero {
+    margin-bottom: 2.5rem;
+   h1 {
+    line-height: 1.5;
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+    }
+
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    line-height: 1.4;
+  }
+}
+
+/* ---------- SMALL MOBILE ---------- */
+
+@media (max-width: 480px) {
+  .hero {
+    h1 {
+    font-size: 1.6rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+}
 }
