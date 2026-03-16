@@ -1,59 +1,79 @@
-# QuizApp
+# QuizApp – Angular + NgRx Full-Stack Application
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.2.
+A scalable quiz platform built with Angular 17+, NgRx, Node.js, Express and MongoDB Atlas, focused on clean architecture and production-ready patterns
 
-## Development server
+- 🔗 Live Demo: https://knowlify-quiz-app.vercel.app/
+- 🔗 Backend API: https://quizapp-be-j15t.onrender.com/
 
-To start a local development server, run:
+# Tech Stack
+**Frontend**
+  - Angular 17 (Standalone Components)
+  - NgRx (State Management)
+  - RxJS
+  - Angular Material
+  - Strict TypeScript
 
-```bash
-ng serve
-```
+ **Backend**
+  - Node.js + Express
+  - MongoDB Atlas
+  - Mongoose ODM
+  - RESTful API design
+  
+**Deployment**
+- Frontend → Vercel
+- Backend → Render
+- Database → MongoDB Atlas
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+# Architecture Highlights
 
-## Code scaffolding
+Feature-based folder structure
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- Lazy-loaded routes
 
-```bash
-ng generate component component-name
-```
+- Centralized NgRx store
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- Smart / Presentational component separation
 
-```bash
-ng generate --help
-```
+- Environment-based configuration
 
-## Building
+- Clean error & loading state handling
 
-To build the project run:
+Designed to reflect real-world scalable frontend architecture, not tutorial-level implementation.
 
-```bash
-ng build
-```
+# Current Features
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+- Fetch quizzes from REST API
 
-## Running unit tests
+- Global state management via NgRx
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+- Loading & error state handling
 
-```bash
-ng test
-```
+- Question navigation logic
 
-## Running end-to-end tests
+- Responsive Angular Material UI
 
-For end-to-end (e2e) testing, run:
+# In Progress
 
-```bash
-ng e2e
-```
+**User**
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+  - JWT authentication
 
-## Additional Resources
+  - Quiz attempt persistence
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+  - Score history
+
+  - User profile dashboard
+
+**Admin**
+
+  - Quiz CRUD operations
+
+  - Role-based access control
+
+  - Protected routes
+
+<img width="1697" height="901" alt="image" src="https://github.com/user-attachments/assets/5edfbf92-b288-4500-a682-7ba404685428" />
+
+<img width="1579" height="913" alt="image" src="https://github.com/user-attachments/assets/bffa8e03-b1c3-4519-a1b5-17a17651bfba" />
+
+
